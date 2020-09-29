@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SAA-SDT/EAD3/master/ead3.rng"
+      type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<ead xmlns="http://ead3.archivists.org/schema/">
+  <control countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" relatedencoding="marc" repositoryencoding="iso15511" scriptencoding="iso15924">
+    <recordid instanceurl="">10003</recordid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Test Resource Record Import Accession</titleproper>
+        <author>Katy Rawdon, Coordinator of Technical Services</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>SCRC Test Repository</publisher>
+        <date>September 2020</date>
+        <num>SCRC Test</num>
+      </publicationstmt>
+    </filedesc>
+    <maintenancestatus value="derived"/>
+    <maintenanceagency>
+      <agencyname>SCRC Test Repository</agencyname>
+    </maintenanceagency>
+    <languagedeclaration>
+      <language langcode="eng">English</language>
+      <script scriptcode="Latn">Latin</script>
+    </languagedeclaration>
+    <conventiondeclaration>
+      <abbr>dacs</abbr>
+      <citation>Describing Archives: A Content Standard</citation>
+    </conventiondeclaration>
+    <maintenancehistory>
+      <maintenanceevent>
+        <eventtype value="derived"/>
+        <eventdatetime>2020-09-21T13:45:52-04:00</eventdatetime>
+        <agenttype value="machine"/>
+        <agent>ArchivesSpace v2.8.0</agent>
+        <eventdescription>This finding aid was produced using ArchivesSpace on Monday September 21, 2020 at 13:45</eventdescription>
+      </maintenanceevent>
+    </maintenancehistory>
+  </control>
+  <archdesc level="collection">
+  <did>
+    <unittitle>Test Resource Record Import Accession</unittitle>
+    <unitid>SCRC Test</unitid>
+    <repository>
+      <corpname>
+        <part>SCRC Test Repository</part>
+      </corpname>
+    </repository>
+    <langmaterial>
+      <language langcode="eng">English</language>
+      <language>Another</language>
+    </langmaterial>
+    <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+      <quantity>10</quantity>
+      <unittype>Linear Feet</unittype>
+    </physdescstructured>
+    <physdesc localtype="container_summary">15 boxes</physdesc>
+    <unitdatestructured certainty="approximate" unitdatetype="inclusive">
+      <daterange>
+        <fromdate standarddate="1900">1900</fromdate>
+        <todate standarddate="2000">2000</todate>
+      </daterange>
+    </unitdatestructured>
+    <unitdate certainty="approximate" unitdatetype="inclusive">1900-2000</unitdate>
+    <unitdatestructured unitdatetype="bulk">
+      <daterange>
+        <fromdate standarddate="1950">1950</fromdate>
+        <todate standarddate="1999">1999</todate>
+      </daterange>
+    </unitdatestructured>
+    <unitdate unitdatetype="bulk">1950-1999</unitdate>
+    <origination label="Creator">
+      <corpname identifier="10824568 " rules="rda" source="naf">
+        <part>Occupy Philadelphia (Movement)</part>
+        <part>Other</part>
+        <part>Another</part>
+      </corpname>
+    </origination>
+  </did>
+  <scopecontent id="aspace_bbb61726869e2c8800e9245e5e148dc8">
+    <head>Content Description</head>
+<p>This is a test record to use when spawning a resource record and then testing a spreadsheet import of a folder listing.</p>
+<p>Another</p>  </scopecontent>
+  <arrangement audience="internal" id="aspace_14455e1e0389dc6289911f7bd2b7435e">
+    <head>Arrangement</head>
+<p>This collection is arranged into 2 series:</p><p>Series 1
+Series 2</p>  </arrangement>
+  <bioghist audience="internal" id="aspace_cfec3e649815bc51006c2bb7e67a55dc">
+    <head>Biographical / Historical</head>
+<p>This is a test historial note</p>  </bioghist>
+  <accessrestrict audience="internal" id="aspace_21f79a98a2a5cf55000601301961a14f">
+    <head>Conditions Governing Access</head>
+<p>This collection is open for research.</p>  </accessrestrict>
+  <acqinfo audience="internal" id="aspace_205a2533eaed02daf371a5e28b69883e">
+    <head>Immediate Source of Acquisition</head>
+<p>Donated by John Smith, 2005.</p>  </acqinfo>
+  <prefercite audience="internal" id="aspace_0f9b748ffb19d32ee94372d661476a12">
+    <head>Preferred Citation</head>
+<p>Test preferred citation note.</p>  </prefercite>
+  <processinfo audience="internal" id="aspace_980410fddea2c8710df07fe06189891b">
+    <head>Processing Information</head>
+<p>Processed by me.</p>  </processinfo>
+  <relatedmaterial audience="internal" id="aspace_3871d795f5fea0cfaca30448e6dae9ae">
+    <head>Related Materials</head>
+<p>There are some related materials.</p>  </relatedmaterial>
+  <separatedmaterial audience="internal" id="aspace_e2a04bff315b48b24c76daebe89161bc">
+    <head>Separated Materials</head>
+<p>Some materials were removed and tossed into a fire.</p>  </separatedmaterial>
+  <controlaccess>
+    <subject source="TBD">
+      <part>Science fiction</part>
+    </subject>
+    <subject source="TBD">
+      <part>Science fiction--Societies, etc</part>
+    </subject>
+    <subject source="TBD">
+      <part>Fantasy</part>
+    </subject>
+    <corpname identifier="no2011173311" rules="aacr" source="naf">
+      <part>Occupy Wall Street (Movement)</part>
+    </corpname>
+    <corpname audience="internal" identifier="10824568 " rules="rda" source="naf">
+      <part>Occupy Philadelphia (Movement)</part>
+      <part>other</part>
+    </corpname>
+  </controlaccess>
+  <dsc>
+    <c01 id="aspace_df04ebd5ee1e4a6d658228052e084980" level="series">
+      <did>
+        <unittitle>Series 1</unittitle>
+        <unitdatestructured unitdatetype="inclusive">
+          <daterange>
+            <fromdate standarddate="1935">1935</fromdate>
+            <todate standarddate="1975">1975</todate>
+          </daterange>
+        </unitdatestructured>
+        <unitdate unitdatetype="inclusive">1935-1975</unitdate>
+        <unitdatestructured unitdatetype="bulk">
+          <daterange><fromdate standarddate="1950">1950</fromdate>
+            <todate standarddate="1970">1970</todate>
+          </daterange>
+        </unitdatestructured><unitdate unitdatetype="bulk">1950-1970</unitdate>
+        <container id="aspace_9c9c1e7b5f95d331e41c45ce0e545adc" label="Mixed Materials" localtype="box">Unknown</container>
+      </did>
+      <odd id="aspace_3a5d6563e7edd9694cee76f589a429e8">
+        <head>General</head>
+        <p>This is a series note.</p>
+      </odd>
+      <arrangement id="aspace_ba87d1ba425d2a61f9a445b21c5c27ff">
+        <head>Arrangement</head>
+        <p>This series is arranged by title.</p>
+      </arrangement>
+      <c02 id="aspace_527bef8fb81084871b500f2f7f3ba1f6" level="file">
+        <did>
+          <unittitle>Folder title</unittitle>
+          <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+            <quantity>1</quantity>
+            <unittype>Folders</unittype>
+          </physdescstructured>
+          <unitdatestructured certainty="approximate" unitdatetype="inclusive">
+            <daterange>
+              <fromdate standarddate="1950">1950</fromdate>
+              <todate standarddate="2000">2000</todate>
+            </daterange>
+          </unitdatestructured><unitdate certainty="approximate" unitdatetype="inclusive">circa 1950-2000</unitdate>
+          <container id="aspace_73ff5df9571b8ddb59c81badcef0a9b1" label="Mixed Materials" localtype="box">1</container>
+          <container id="aspace_756155650bb98ec83d6066dc0757722d" localtype="folder" parent="aspace_73ff5df9571b8ddb59c81badcef0a9b1">1</container>
+        </did>
+      </c02>
+      <c02 id="aspace_256a752728678aab5bbfec1a62b7c74a" level="file">
+        <did>
+          <unittitle>Folder title</unittitle>
+          <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+            <quantity>1</quantity>
+            <unittype>Folders</unittype>
+          </physdescstructured>
+          <unitdatestructured unitdatetype="inclusive">
+            <daterange>
+              <fromdate standarddate="1935">1935</fromdate>
+              <todate standarddate="1955">1955</todate>
+            </daterange>
+          </unitdatestructured>
+          <unitdate unitdatetype="inclusive">1935-1955</unitdate>
+          <container id="aspace_94964f0ed598331a50749d767e119abc" label="Mixed Materials" localtype="box">1</container>
+          <container id="aspace_cdaac353d26563dfd1fa62119b47202c" localtype="folder" parent="aspace_94964f0ed598331a50749d767e119abc">2</container>
+        </did>
+      </c02>
+      <c02 id="aspace_9d28289576b38625ecd54e1257572010" level="file">
+        <did>
+          <unittitle>Folder title</unittitle>
+          <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+            <quantity>1</quantity>
+            <unittype>Folders</unittype>
+          </physdescstructured>
+          <unitdatestructured unitdatetype="inclusive">
+            <daterange>
+              <fromdate standarddate="1970">1970</fromdate>
+              <todate standarddate="1975">1975</todate>
+            </daterange>
+          </unitdatestructured>
+          <unitdate unitdatetype="inclusive">1970-1975</unitdate>
+          <container id="aspace_f2145ee4c59b0ce8af135c75b0b237e5" label="Mixed Materials" localtype="box">1</container>
+          <container id="aspace_a9198dce5c2a72697fd8bdf20e12ac19" localtype="folder" parent="aspace_f2145ee4c59b0ce8af135c75b0b237e5">3</container>
+        </did>
+      </c02>
+    </c01>
+    <c01 id="aspace_f71be1c7963a7b05df9111373fd95420" level="series">
+      <did>
+        <unittitle>Series 2</unittitle>
+        <unitdatestructured unitdatetype="inclusive">
+          <daterange>
+            <fromdate standarddate="1940">1940</fromdate>
+            <todate standarddate="1955">1955</todate>
+          </daterange>
+        </unitdatestructured>
+        <container id="aspace_aa345242dca426bbcfd6614235f8d983" label="Mixed Materials" localtype="box">Unknown</container>
+      </did>
+      <odd id="aspace_f9bd10462dbff2f75116dad6e1541605">
+        <head>General</head>
+        <p>Another series note.</p>
+      </odd>
+      <arrangement id="aspace_6e536b0bacd38f536a7977f1df08f643">
+        <head>Arrangement</head>
+        <p>Another series note.</p>
+      </arrangement>
+      <c02 id="aspace_1b433e582e1c7f7fe6b934b7d89618f2" level="file">
+        <did>
+          <unittitle>Folder title</unittitle>
+          <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+            <quantity>1</quantity>
+            <unittype>Folders</unittype>
+          </physdescstructured>
+          <unitdatestructured unitdatetype="inclusive">
+            <datesingle standarddate="1945">1945</datesingle>
+          </unitdatestructured>
+          <container id="aspace_99abde70a1ec83131b0fc41fd60b9ffd" label="Mixed Materials" localtype="box">1</container>
+          <container id="aspace_3fa8f37f5e7f4068b3956fcc348b2f05" localtype="folder" parent="aspace_99abde70a1ec83131b0fc41fd60b9ffd">1</container>
+        </did>
+      </c02>
+      <c02 id="aspace_0bd47d6f213b8ad946b2ca051a9399de" level="file">
+        <did>
+          <unittitle>Folder title</unittitle>
+          <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+            <quantity>1</quantity>
+            <unittype>Folders</unittype>
+          </physdescstructured>
+          <unitdatestructured unitdatetype="inclusive">
+            <daterange>
+              <fromdate standarddate="1940">1940</fromdate>
+              <todate standarddate="1955">1955</todate>
+            </daterange>
+          </unitdatestructured>
+          <unitdate unitdatetype="inclusive">1940-1955</unitdate>
+          <container id="aspace_b1cbad13816efa7ea5c0c6c6002a1cd2" label="Mixed Materials" localtype="box">1</container>
+          <container id="aspace_2bba9ba748f27021c91dbeb6f73de5c1" localtype="folder" parent="aspace_b1cbad13816efa7ea5c0c6c6002a1cd2">2</container>
+        </did>
+      </c02>
+    </c01>
+  </dsc>
+</archdesc>
+</ead>
