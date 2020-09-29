@@ -6,7 +6,9 @@
     
     <xsl:strip-space elements="*"/>
     <xsl:output method="text" indent="no"/>
-
+    
+    <!-- WORK IN PROGRESS -->
+    
     <!-- transforms EAD in XML from aspace to plain text following TU finding aid template -->
     
     <!-- Sample finding aid: https://library.temple.edu/finding_aids/arthur-langley-searles-collection-of-h-p-lovecraft-research-files -->
