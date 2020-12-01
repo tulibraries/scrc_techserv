@@ -123,6 +123,7 @@ Organization and Arrangement
     <!-- alt form ; not sure of xpath to this node -->
     <xsl:template match="ead:xpath/ead:altform">
 Alternate Form Available
+    
         <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
 
     </xsl:template>
