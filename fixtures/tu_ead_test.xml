@@ -122,8 +122,16 @@ Series 2</p>  </arrangement>
     </corpname>
     <corpname audience="internal" identifier="10824568 " rules="rda" source="naf">
       <part>Occupy Philadelphia (Movement)</part>
-      <part>other</part>
     </corpname>
+    <geogname audience="internal" identifier="10824568 " rules="rda" source="naf">
+      <part>Philadelphia (Pa.)</part>
+    </geogname>
+    <persname audience="internal" identifier="10824568 " rules="rda" source="naf">
+      <part>Smith, James</part>
+    </persname>
+    <genreform audience="internal" identifier="10824568 " rules="rda" source="naf">
+      <part>Correspondence</part>
+    </genreform>
   </controlaccess>
   <dsc>
     <c01 id="aspace_df04ebd5ee1e4a6d658228052e084980" level="series">
