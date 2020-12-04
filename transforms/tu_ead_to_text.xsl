@@ -122,17 +122,13 @@ Processing Information
 <p>The following headings have been used to index the description of this collection in Temple University’s electronic catalog:</p>
         
 Personal/Family Names:
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:persname"/>
-        
+<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:persname"/>        
 Corporate Names:
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:corpname"/>
-        
+<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:corpname"/>        
 Subjects:
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:subject"/>
-        
 Places:
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:geogname"/>
-        
 Material Types:
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:genreform"/>  
        
@@ -249,32 +245,38 @@ Material Types:
     
     <!-- persname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:persname">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- corpname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:corpname">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- subject -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:subject">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- geogname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:geogname">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- genreform -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:genreform">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- materialspec -->
     <xsl:template match="ead:archdesc/ead:did/ead:materialspec">
-        <xsl:value-of select="ead:materialspec" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:materialspec"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     
