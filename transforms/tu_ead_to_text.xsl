@@ -7,44 +7,31 @@
     <xsl:strip-space elements="*"/>
     <xsl:output method="text" indent="no"/>
     
-    <!-- WORK IN PROGRESS -->
-    
     <!-- transforms EAD in XML from aspace to plain text following TU finding aid template -->
-    
-    <!-- Sample finding aid: https://library.temple.edu/finding_aids/arthur-langley-searles-collection-of-h-p-lovecraft-research-files -->
-
     <xsl:template match="text() | @*"/>
-
     <xsl:template match="ead:ead">
+    	
 --Collection Summary--
     
 Title
-    
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:unittitle"/>    
         
 Dates
-        
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:unitdate"/>
     
 Collection ID
-        
 <xsl:apply-templates select="//ead:unitid"/>    
 
 Creator(s)
-    
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:origination[@label = 'Creator']/*"/>
-
 Quantity
-        
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:physdescstructured"/>
-        <xsl:apply-templates select="ead:archdesc/ead:did/ead:physdesc[@localtype = 'container_summary']"/>
+<xsl:apply-templates select="ead:archdesc/ead:did/ead:physdesc[@localtype = 'container_summary']"/>
 
 Repository
-
 Special Collections Research Center, Temple University Libraries
 
 Language
-    
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:langmaterial"/>
 
 --Detailed Collection Information--
@@ -60,14 +47,21 @@ Description of Collection
 Organization and Arrangement
 
 <xsl:apply-templates select="ead:archdesc/ead:arrangement"/>
- 
-[Need to figure out how to include all c01 series notes here, they will also be repeated in the box/folder list]
- 
+        
+<xsl:apply-templates select="ead:archdesc/ead:dsc/ead:c01/ead:odd"/>
 --Patron Information--
-  
+
+Alternate Form Available
+
+<xsl:apply-templates select="ead:archdesc/ead:altformavail"/>
+
+Other Finding Aids
+
+<xsl:apply-templates select="ead:archdesc/ead:otherfindaid"/>
+
 Catalog Record
   
-  A record for this collection is available in Temple University’s online library catalog: [Link to catalog record is in an External Document note, but does not appear in EAD - add manually?]
+A record for this collection is available in Temple University’s online library catalog: [Link to catalog record is in an External Document note, but does not appear in EAD - add manually?]
   
 Research Access
   
@@ -87,8 +81,8 @@ Accruals
 
 Condition Note 
 
+[Add manually if applicable, or delete note if not applicable]
 <xsl:apply-templates select="ead:archdesc/ead:physdesc"/>
-
 Publication and Copyright Information
 
 <xsl:apply-templates select="ead:archdesc/ead:userestrict"/>
@@ -105,7 +99,7 @@ Related Material
 
 Acquisition Information
 
-<xsl:apply-templates select="ead:archdesc/ead:acqinfo"/>
+<xsl:apply-templates select="ead:archdesc/ead:custodhist"/>
         
 Separated Material
 
@@ -113,9 +107,7 @@ Separated Material
         
 Processing Information
         
-<xsl:apply-templates select="ead:archdesc/ead:processinfo"/>
-        
-        
+<xsl:apply-templates select="ead:archdesc/ead:processinfo"/>        
         
 --Index Terms--
         
@@ -131,7 +123,8 @@ Places:
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:geogname"/>
 Material Types:
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:genreform"/>  
-       
+
+--Inventory--
 
 </xsl:template>
     
@@ -158,6 +151,7 @@ Material Types:
     <!-- creators -->
     <xsl:template match="ead:archdesc/ead:did/ead:origination[@label = 'Creator']/*">
         <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- physical description -->
@@ -185,7 +179,24 @@ Material Types:
     
     <!-- arrangement -->
     <xsl:template match="ead:archdesc/ead:arrangement">
-        <xsl:value-of select="ead:p"/>
+        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
+    </xsl:template>
+    
+    <!-- frontmatter series notes -->
+    <xsl:template match="ead:archdesc/ead:dsc/ead:c01/ead:odd">
+        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
+    </xsl:template>
+    
+    <!-- Alternate Form Available -->
+    <xsl:template match="ead:archdesc/ead:altformavail">
+        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+    </xsl:template>
+    
+    <!-- otherfindaid -->
+    <xsl:template match="ead:archdesc/ead:otherfindaid">
+        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
     </xsl:template>
     
     <!-- accessrestrict -->
@@ -228,8 +239,8 @@ Material Types:
         <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
     </xsl:template>
     
-    <!-- acqinfo -->
-    <xsl:template match="ead:archdesc/ead:acqinfo">
+    <!-- custodhist -->
+    <xsl:template match="ead:archdesc/ead:custodhist">
         <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
     </xsl:template>
     
@@ -282,7 +293,6 @@ Material Types:
     
 <!-- END FRONTMATTER -->  
     
-<!-- BEGIN BOX AND FOLDER LIST --> 
 
 </xsl:stylesheet>
 
