@@ -11,7 +11,7 @@
     <xsl:template match="text() | @*"/>
     <xsl:template match="ead:ead">
     	
---Collection Summary--
+Collection Summary
     
 Title
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:unittitle"/>    
@@ -34,9 +34,9 @@ Special Collections Research Center, Temple University Libraries
 Language
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:langmaterial"/>
 
---Detailed Collection Information--
+Detailed Collection Information
 
-Historical Note [or] Biographical Note
+<!-- Historical Note [or] Biographical Note -->
 
 <xsl:apply-templates select="ead:archdesc/ead:bioghist"/>
         
@@ -49,13 +49,13 @@ Organization and Arrangement
 <xsl:apply-templates select="ead:archdesc/ead:arrangement"/>
         
 <xsl:apply-templates select="ead:archdesc/ead:dsc/ead:c01/ead:odd"/>
---Patron Information--
+Patron Information
 
-Alternate Form Available
+<!-- Alternate Form Available -->
 
 <xsl:apply-templates select="ead:archdesc/ead:altformavail"/>
 
-Other Finding Aids
+<!-- Other Finding Aids -->
 
 <xsl:apply-templates select="ead:archdesc/ead:otherfindaid"/>
 
@@ -71,11 +71,11 @@ Collections Stored Off-Site
 
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:physloc"/>
      
-Technical Access
+<!-- Technical Access -->
 
 <xsl:apply-templates select="ead:archdesc/ead:phystech"/>
 
-Accruals
+<!-- Accruals -->
 
 <xsl:apply-templates select="ead:archdesc/ead:accruals"/>
 
@@ -91,17 +91,17 @@ Preferred Citation
         
 <xsl:apply-templates select="ead:archdesc/ead:prefercite"/>
         
-Related Material
+<!-- Related Material -->
 
 <xsl:apply-templates select="ead:archdesc/ead:relatedmaterial"/>
         
---Administrative Information--
+Administrative Information
 
 Acquisition Information
 
 <xsl:apply-templates select="ead:archdesc/ead:custodhist"/>
         
-Separated Material
+<!-- Separated Material -->
 
 <xsl:apply-templates select="ead:archdesc/ead:separatedmaterial"/>
         
@@ -113,15 +113,15 @@ Processing Information
         
 <p>The following headings have been used to index the description of this collection in Temple University’s electronic catalog:</p>
         
-Personal/Family Names:
+<!-- Personal/Family Names: -->
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:persname"/>        
-Corporate Names:
+<!-- Corporate Names: -->
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:corpname"/>        
-Subjects:
+<!-- Subjects: -->
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:subject"/>
-Places:
+<!-- Places: -->
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:geogname"/>
-Material Types:
+<!-- Material Types: -->
 <xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:genreform"/>  
 
 --Inventory--
@@ -169,7 +169,12 @@ Material Types:
     
     <!-- bioghist -->
     <xsl:template match="ead:archdesc/ead:bioghist">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:value-of>Historical Note [or] Biographical Note</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- scopecontent -->
@@ -185,18 +190,32 @@ Material Types:
     
     <!-- frontmatter series notes -->
     <xsl:template match="ead:archdesc/ead:dsc/ead:c01/ead:odd">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
-        <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- Alternate Form Available -->
     <xsl:template match="ead:archdesc/ead:altformavail">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:value-of>Alternate Form Available</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- otherfindaid -->
     <xsl:template match="ead:archdesc/ead:otherfindaid">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:value-of>Other Finding Aids</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- accessrestrict -->
@@ -211,12 +230,26 @@ Material Types:
     
     <!-- phystech -->
     <xsl:template match="ead:archdesc/ead:phystech">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Technical Access</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- accruals -->
     <xsl:template match="ead:archdesc/ead:accruals">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Accruals </xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- physdesc currently for Condition Note but needs work -->
@@ -236,7 +269,14 @@ Material Types:
     
     <!-- relatedmaterial -->
     <xsl:template match="ead:archdesc/ead:relatedmaterial">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Related Material</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- custodhist -->
@@ -246,7 +286,14 @@ Material Types:
     
     <!-- separatedmaterial -->
     <xsl:template match="ead:archdesc/ead:separatedmaterial">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Separated Material</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        </xsl:if>
     </xsl:template>
     
     <!-- processinfo -->
@@ -256,40 +303,59 @@ Material Types:
     
     <!-- persname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:persname">
-        <xsl:value-of select="ead:part"/>
-        <xsl:text>&#xa;</xsl:text>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Personal/Family Names:</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:part"/>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- corpname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:corpname">
-        <xsl:value-of select="ead:part"/>
-        <xsl:text>&#xa;</xsl:text>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Corporate Names:</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:part"/>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- subject -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:subject">
-        <xsl:value-of select="ead:part"/>
-        <xsl:text>&#xa;</xsl:text>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Subjects:</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:part"/>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- geogname -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:geogname">
-        <xsl:value-of select="ead:part"/>
-        <xsl:text>&#xa;</xsl:text>
+        <xsl:if test="normalize-space(.)!=''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of>Places:</xsl:value-of>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:part"/>
+            <xsl:text>&#xa;</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <!-- genreform -->
     <xsl:template match="ead:archdesc/ead:controlaccess/ead:genreform">
+    <xsl:if test="normalize-space(.)!=''">
+        <xsl:text>&#xa;</xsl:text>
+        <xsl:value-of>Material Types:</xsl:value-of>
+        <xsl:text>&#xa;</xsl:text>
         <xsl:value-of select="ead:part"/>
         <xsl:text>&#xa;</xsl:text>
+    </xsl:if>
     </xsl:template>
-    
-    <!-- materialspec -->
-    <xsl:template match="ead:archdesc/ead:did/ead:materialspec">
-        <xsl:value-of select="ead:materialspec"/>
-        <xsl:text>&#xa;</xsl:text>
-    </xsl:template>
-    
     
 <!-- END FRONTMATTER -->  
     
