@@ -1493,7 +1493,7 @@ Processing Information
 		<!-- Scenario 1: when the first physdescstructed element has the @physdescstructuredtype value of "spaceoccupied", optionally followed by 
 			other physdesstructured elements that have @physdescstructuredtype='carrier' and/or @physdescstructuredtype='materialtype'. -->
 		<xsl:choose>
-			<xsl:when test="position() = '1' and ./@physdescstructuredtype = 'spaceoccupied'">
+			<xsl:when test="position() = 1 and ./@physdescstructuredtype = 'spaceoccupied'">
 				<!-- Insert its quantity and type with a blank space between them-->
 				<xsl:apply-templates select="ead:quantity"/>
 				<xsl:text> </xsl:text>
@@ -1527,7 +1527,7 @@ Processing Information
 
 			<!-- Scenario 2: When the first physdescstructed element has the @physdescstructuredtype="carrier", optionally followed by 
 			other physdesstructured elements that have @physdescstructuredtype='spaceoccupied' and/or @physdescstructuredtype='materialtype'-->
-			<xsl:when test="position() = '1' and ./@physdescstructuredtype = 'carrier'">
+			<xsl:when test="position() = 1 and ./@physdescstructuredtype = 'carrier'">
 				<!-- Insert its quantity and type with a blank space between them-->
 				<xsl:apply-templates select="ead:quantity"/>
 				<xsl:text> </xsl:text>
@@ -1560,7 +1560,7 @@ Processing Information
 
 			<!-- Scenario 3 When the first physdescstructed element has the @physdescstructuredtype="materialtype", optionally followed by 
 			other physdesstructured elements that have @physdescstructuredtype='carrier' and/or @physdescstructuredtype='spaceoccupied'-->
-			<xsl:when test="position() = '1' and ./@physdescstructuredtype = 'materialtype'">
+			<xsl:when test="position() = 1 and ./@physdescstructuredtype = 'materialtype'">
 				<!-- Insert its quantity and type with a blank space between them-->
 				<xsl:apply-templates select="ead:quantity"/>
 				<xsl:text> </xsl:text>
