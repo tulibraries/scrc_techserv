@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SAA-SDT/EAD3/master/ead3.rng"
+      type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ead xmlns="http://ead3.archivists.org/schema/"><control countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" relatedencoding="marc" repositoryencoding="iso15511" scriptencoding="iso15924"><recordid instanceurl="">10003</recordid><filedesc><titlestmt><titleproper>Test Finding Aid</titleproper><author>Katy Rawdon, Coordinator of Technical Services</author><sponsor>A Large Funding Agency</sponsor></titlestmt><publicationstmt><publisher>SCRC Migration repository</publisher><date>December 2020</date><num>SCRC 1234</num></publicationstmt></filedesc><maintenancestatus value="derived"/><maintenanceagency><agencyname>SCRC Migration repository</agencyname></maintenanceagency><languagedeclaration><language langcode="eng">English</language><script scriptcode="Latn">Latin</script></languagedeclaration><conventiondeclaration><abbr>dacs</abbr><citation>Describing Archives: A Content Standard</citation></conventiondeclaration><maintenancehistory><maintenanceevent><eventtype value="derived"/><eventdatetime>2020-12-07T09:05:57-05:00</eventdatetime><agenttype value="machine"/><agent>ArchivesSpace v2.8.1</agent><eventdescription>This finding aid was produced using ArchivesSpace on Monday December  7, 2020 at 09:05</eventdescription></maintenanceevent></maintenancehistory></control><archdesc level="collection">
+  <did>
+    <unittitle>Test Finding Aid</unittitle>
+    <unitid>SCRC 1234</unitid>
+    <repository>
+      <corpname>
+        <part>SCRC Migration repository</part>
+      </corpname>
+    </repository>
+    <langmaterial>
+      <language langcode="eng">English</language>
+    </langmaterial>
+    <container id="aspace_9b7e924467a6f028432735bf9a6b6a0e" label="Mixed Materials" localtype="box">1-12</container>
+    <container id="aspace_8b189ea23cc1c99a427a7688853b4659" label="Mixed Materials" localtype="box">12-17</container>
+    <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+      <quantity>10</quantity>
+      <unittype>Linear Feet</unittype>
+    </physdescstructured>
+    <physdesc localtype="container_summary">15 boxes + 1 map folder</physdesc>
+    <unitdatestructured certainty="approximate" datechar="creation" unitdatetype="inclusive">
+      <daterange>
+        <fromdate standarddate="1900">1900</fromdate>
+        <todate standarddate="2000">2000</todate>
+      </daterange>
+    </unitdatestructured>
+    <unitdate certainty="approximate" datechar="creation" unitdatetype="inclusive">1900-2000</unitdate>
+    <unitdatestructured datechar="creation" unitdatetype="bulk">
+      <daterange>
+        <fromdate standarddate="1950">1950</fromdate>
+        <todate standarddate="1999">1999</todate>
+      </daterange>
+    </unitdatestructured>
+    <unitdate datechar="creation" unitdatetype="bulk">1950-1999</unitdate>
+    <physdesc id="aspace_f28b06850da9b6c53f0c3eca9ccf6aca">Moldy as heck.</physdesc>
+    <physloc id="aspace_eb258d2b1b169991213bde5c2ba1a1c8">This collection may be housed off-site at the Library Depository, and require up to two business days to retrieve. Please review the finding aid and be prepared to identify specific materials to be retrieved. Contact the Special Collections Research Center in advance of your visit, so that materials may be relocated to the reading room for research.</physloc>
+    <origination label="Creator">
+      <corpname identifier="10824568 " rules="rda" source="naf">
+        <part>Occupy Philadelphia (Movement)</part>
+      </corpname>
+    </origination>
+    <origination label="Creator">
+      <persname source="TBD">
+        <part>Jones, Victoria D.</part>
+      </persname>
+    </origination>
+  </did>
+  <accessrestrict id="aspace_21f79a98a2a5cf55000601301961a14f">
+    <head>Conditions Governing Access</head>
+<p>Collection is open for research. Glass negatives in box 60 are restricted due to preservation concerns. Personnel records in box 28 are restricted for 50 years from date of creation.</p>  </accessrestrict>
+  <accruals id="aspace_2f01598e8cfeef047397adedac7fc776">
+    <head>Accruals</head>
+<p>Additions to this collection are expected. Websites are captured using Archive-It periodically, and the latest additions may not yet be included in this finding aid. For information on material–physical and digital, including captured websites–that may have been added since the last finding aid update, please contact the Special Collections Research Center.</p>  </accruals>
+  <custodhist id="aspace_205a2533eaed02daf371a5e28b69883e">
+    <head>Custodial History</head>
+<p>Donated by John Smith, 2005.</p>  </custodhist>
+  <arrangement id="aspace_14455e1e0389dc6289911f7bd2b7435e">
+    <head>Arrangement</head>
+<p>This collection is arranged into 2 series:</p><p>Series 1
+Series 2</p>  </arrangement>
+  <bioghist id="aspace_cfec3e649815bc51006c2bb7e67a55dc">
+    <head>Historical Note</head>
+<p>This is a test historical note</p>  </bioghist>
+  <phystech id="aspace_1e440e00b01deefd221955e731b81561">
+    <head>Physical Characteristics and Technical Requirements</head>
+<p>Original audiovisual materials, as well as preservation and duplicating masters, may not be played. Researchers must consult use copies, or if none exist must pay for a use copy. Certain digital files may also be inaccessible. Please contact the Special Collections Research Center for more information.</p>  </phystech>
+  <prefercite id="aspace_0f9b748ffb19d32ee94372d661476a12">
+    <head>Preferred Citation</head>
+<p>A letter, Box 1, Folder 4, Test Resource Record Finding Aid, SCRC 1234, Special Collections Research Center, Temple University Libraries, Philadelphia, Pennsylvania.</p>  </prefercite>
+  <processinfo id="aspace_980410fddea2c8710df07fe06189891b">
+    <head>Processing Information</head>
+<p>Processed by me.</p>  </processinfo>
+  <relatedmaterial id="aspace_3871d795f5fea0cfaca30448e6dae9ae">
+    <head>Related Materials</head>
+<p>There are some related materials.</p>  </relatedmaterial>
+  <scopecontent id="aspace_bbb61726869e2c8800e9245e5e148dc8">
+    <head>Scope and Contents</head>
+<p>This collection is completely made up and does not exist at all.</p>  </scopecontent>
+  <separatedmaterial id="aspace_e2a04bff315b48b24c76daebe89161bc">
+    <head>Separated Materials</head>
+<p>Some materials were removed and tossed into a fire.</p>  </separatedmaterial>
+  <userestrict id="aspace_590cd823cb474cc12f197a189c1a71b6">
+    <head>Conditions Governing Use</head>
+<p>The Test Finding Aid is the physical property of the Special Collections Research Center, Temple University Libraries. The creator/donor has not assigned their rights to Temple University Libraries.  Other creators' intellectual property rights, including copyright, belong to them or their legal heirs and assigns. Researchers are responsible for determining the identity of rights holders and obtaining their permission for publication and for other purposes where stated.</p>  </userestrict>
+  <altformavail id="aspace_14f220e98c3b0a5995664f82245f70e0">
+    <head>Existence and Location of Copies</head>
+<p>A selection of photographs from this collection, primarily Subseries 20.1: Photographic Prints, circa 1897-1972  (PC-1),  has been digitized and is available online on the Temple University Digital Collections website.</p>  </altformavail>
+  <otherfindaid id="aspace_14ab6bd0952d56b26502aa9a019e48d0">
+    <head>Other Finding Aids</head>
+<p>To assist researchers the Special Collections Research Center has prepared the Housing Association of Delaware Valley and Octavia Hill Association Photograph Collections Streets and Other Locations Index.</p>  </otherfindaid>
+  <controlaccess>
+    <subject source="TBD">
+      <part>Science fiction</part>
+    </subject>
+    <subject source="TBD">
+      <part>Science fiction--Societies, etc</part>
+    </subject>
+    <subject source="TBD">
+      <part>Fantasy</part>
+    </subject>
+    <geogname source="TBD">
+      <part>Camden (N.J.)</part>
+    </geogname>
+    <genreform source="aat">
+      <part>Correspondence</part>
+    </genreform>
+    <geogname source="TBD">
+      <part>Chester County (Pa.)</part>
+    </geogname>
+    <genreform source="aat">
+      <part>Diaries</part>
+    </genreform>
+    <corpname audience="internal" identifier="10824568 " rules="rda" source="naf">
+      <part>Occupy Philadelphia (Movement)</part>
+    </corpname>
+    <corpname source="TBD">
+      <part>Philadelphia Historic Preservation Corporation</part>
+    </corpname>
+    <persname source="TBD">
+      <part>Smith, George O. (George Oliver), 1911-</part>
+    </persname>
+  </controlaccess>
+</archdesc>
+</ead>

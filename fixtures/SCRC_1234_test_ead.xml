@@ -49,47 +49,47 @@
   </did>
   <accessrestrict id="aspace_21f79a98a2a5cf55000601301961a14f">
     <head>Conditions Governing Access</head>
-<p>Collection is open for research. Glass negatives in box 60 are restricted due to preservation concerns. Personnel records in box 28 are restricted for 50 years from date of creation.</p>  </accessrestrict>
+    <p>Collection is open for research. Glass negatives in box 60 are restricted due to preservation concerns. Personnel records in box 28 are restricted for 50 years from date of creation.</p>  </accessrestrict>
   <accruals id="aspace_2f01598e8cfeef047397adedac7fc776">
     <head>Accruals</head>
-<p>Additions to this collection are expected. Websites are captured using Archive-It periodically, and the latest additions may not yet be included in this finding aid. For information on material–physical and digital, including captured websites–that may have been added since the last finding aid update, please contact the Special Collections Research Center.</p>  </accruals>
+    <p>Additions to this collection are expected. Websites are captured using Archive-It periodically, and the latest additions may not yet be included in this finding aid. For information on material–physical and digital, including captured websites–that may have been added since the last finding aid update, please contact the Special Collections Research Center.</p>  </accruals>
   <custodhist id="aspace_205a2533eaed02daf371a5e28b69883e">
     <head>Custodial History</head>
-<p>Donated by John Smith, 2005.</p>  </custodhist>
+    <p>Donated by John Smith, 2005.</p>  </custodhist>
   <arrangement id="aspace_14455e1e0389dc6289911f7bd2b7435e">
     <head>Arrangement</head>
-<p>This collection is arranged into 2 series:</p><p>Series 1
-Series 2</p>  </arrangement>
+    <p>This collection is arranged into 2 series:</p><p>Series 1
+      Series 2</p>  </arrangement>
   <bioghist id="aspace_cfec3e649815bc51006c2bb7e67a55dc">
     <head>Historical Note</head>
-<p>This is a test historical note</p>  </bioghist>
+    <p>This is a test historical note</p>  </bioghist>
   <phystech id="aspace_1e440e00b01deefd221955e731b81561">
     <head>Physical Characteristics and Technical Requirements</head>
-<p>Original audiovisual materials, as well as preservation and duplicating masters, may not be played. Researchers must consult use copies, or if none exist must pay for a use copy. Certain digital files may also be inaccessible. Please contact the Special Collections Research Center for more information.</p>  </phystech>
+    <p>Original audiovisual materials, as well as preservation and duplicating masters, may not be played. Researchers must consult use copies, or if none exist must pay for a use copy. Certain digital files may also be inaccessible. Please contact the Special Collections Research Center for more information.</p>  </phystech>
   <prefercite id="aspace_0f9b748ffb19d32ee94372d661476a12">
     <head>Preferred Citation</head>
-<p>A letter, Box 1, Folder 4, Test Resource Record Finding Aid, SCRC 1234, Special Collections Research Center, Temple University Libraries, Philadelphia, Pennsylvania.</p>  </prefercite>
+    <p>A letter, Box 1, Folder 4, Test Resource Record Finding Aid, SCRC 1234, Special Collections Research Center, Temple University Libraries, Philadelphia, Pennsylvania.</p>  </prefercite>
   <processinfo id="aspace_980410fddea2c8710df07fe06189891b">
     <head>Processing Information</head>
-<p>Processed by me.</p>  </processinfo>
+    <p>Processed by me.</p>  </processinfo>
   <relatedmaterial id="aspace_3871d795f5fea0cfaca30448e6dae9ae">
     <head>Related Materials</head>
-<p>There are some related materials.</p>  </relatedmaterial>
+    <p>There are some related materials.</p>  </relatedmaterial>
   <scopecontent id="aspace_bbb61726869e2c8800e9245e5e148dc8">
     <head>Scope and Contents</head>
-<p>This collection is completely made up and does not exist at all.</p>  </scopecontent>
+    <p>This collection is completely made up and does not exist at all.</p>  </scopecontent>
   <separatedmaterial id="aspace_e2a04bff315b48b24c76daebe89161bc">
     <head>Separated Materials</head>
-<p>Some materials were removed and tossed into a fire.</p>  </separatedmaterial>
+    <p>Some materials were removed and tossed into a fire.</p>  </separatedmaterial>
   <userestrict id="aspace_590cd823cb474cc12f197a189c1a71b6">
     <head>Conditions Governing Use</head>
-<p>The Test Finding Aid is the physical property of the Special Collections Research Center, Temple University Libraries. The creator/donor has not assigned their rights to Temple University Libraries.  Other creators' intellectual property rights, including copyright, belong to them or their legal heirs and assigns. Researchers are responsible for determining the identity of rights holders and obtaining their permission for publication and for other purposes where stated.</p>  </userestrict>
+    <p>The Test Finding Aid is the physical property of the Special Collections Research Center, Temple University Libraries. The creator/donor has not assigned their rights to Temple University Libraries.  Other creators' intellectual property rights, including copyright, belong to them or their legal heirs and assigns. Researchers are responsible for determining the identity of rights holders and obtaining their permission for publication and for other purposes where stated.</p>  </userestrict>
   <altformavail id="aspace_14f220e98c3b0a5995664f82245f70e0">
     <head>Existence and Location of Copies</head>
-<p>A selection of photographs from this collection, primarily Subseries 20.1: Photographic Prints, circa 1897-1972  (PC-1),  has been digitized and is available online on the Temple University Digital Collections website.</p>  </altformavail>
+    <p>A selection of photographs from this collection, primarily Subseries 20.1: Photographic Prints, circa 1897-1972  (PC-1),  has been digitized and is available online on the Temple University Digital Collections website.</p>  </altformavail>
   <otherfindaid id="aspace_14ab6bd0952d56b26502aa9a019e48d0">
     <head>Other Finding Aids</head>
-<p>To assist researchers the Special Collections Research Center has prepared the Housing Association of Delaware Valley and Octavia Hill Association Photograph Collections Streets and Other Locations Index.</p>  </otherfindaid>
+    <p>To assist researchers the Special Collections Research Center has prepared the Housing Association of Delaware Valley and Octavia Hill Association Photograph Collections Streets and Other Locations Index.</p>  </otherfindaid>
   <controlaccess>
     <subject source="TBD">
       <part>Science fiction</part>
@@ -122,6 +122,55 @@ Series 2</p>  </arrangement>
       <part>Smith, George O. (George Oliver), 1911-</part>
     </persname>
   </controlaccess>
-  <dsc><c01 id="aspace_df04ebd5ee1e4a6d658228052e084980" level="series"><did><unittitle>Series 1: Correspondence</unittitle><unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1935">1935</fromdate><todate standarddate="1975">1975</todate></daterange></unitdatestructured><unitdate datechar="creation" unitdatetype="inclusive">1935-1975</unitdate><unitdatestructured datechar="creation" unitdatetype="bulk"><daterange><fromdate standarddate="1950">1950</fromdate><todate standarddate="1970">1970</todate></daterange></unitdatestructured><unitdate datechar="creation" unitdatetype="bulk">1950-1970</unitdate></did><odd id="aspace_3a5d6563e7edd9694cee76f589a429e8"><head>General</head><p>Series 1 includes some correspondence and other stuff.</p></odd><arrangement id="aspace_ba87d1ba425d2a61f9a445b21c5c27ff"><head>Arrangement</head><p>This series is arranged by title.</p></arrangement><c02 id="aspace_527bef8fb81084871b500f2f7f3ba1f6" level="file"><did><unittitle>Correspondence of yore</unittitle><physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured><unitdatestructured certainty="approximate" datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1950">1950</fromdate><todate standarddate="2000">2000</todate></daterange></unitdatestructured><unitdate certainty="approximate" datechar="creation" unitdatetype="inclusive">circa 1950-2000</unitdate></did></c02><c02 id="aspace_256a752728678aab5bbfec1a62b7c74a" level="file"><did><unittitle>Correspondence and stuff</unittitle><physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured><unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1935">1935</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured><unitdate datechar="creation" unitdatetype="inclusive">1935-1955</unitdate></did></c02><c02 id="aspace_9d28289576b38625ecd54e1257572010" level="file"><did><unittitle>Correspondence and diaries</unittitle><physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured><unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1970">1970</fromdate><todate standarddate="1975">1975</todate></daterange></unitdatestructured><unitdate datechar="creation" unitdatetype="inclusive">1970-1975</unitdate></did></c02></c01><c01 id="aspace_f71be1c7963a7b05df9111373fd95420" level="series"><did><unittitle>Series 2: Papers and other materials</unittitle><unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1940">1940</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured></did><odd id="aspace_f9bd10462dbff2f75116dad6e1541605"><head>General</head><p>Series 2 includes miscellaneous stuff.</p></odd><arrangement id="aspace_6e536b0bacd38f536a7977f1df08f643"><head>Arrangement</head><p>Another series note.</p></arrangement><c02 id="aspace_1b433e582e1c7f7fe6b934b7d89618f2" level="file"><did><unittitle>Folder title</unittitle><physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured><unitdatestructured datechar="creation" unitdatetype="inclusive"><datesingle standarddate="1945">1945</datesingle></unitdatestructured></did></c02><c02 id="aspace_0bd47d6f213b8ad946b2ca051a9399de" level="file"><did><unittitle>Folder title</unittitle><physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured><unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1940">1940</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured><unitdate datechar="creation" unitdatetype="inclusive">1940-1955</unitdate></did></c02></c01></dsc>
+  <dsc><c01 id="aspace_df04ebd5ee1e4a6d658228052e084980" level="series"><did>
+    <unittitle>Series 1: Correspondence</unittitle>
+    <unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1935">1935</fromdate><todate standarddate="1975">1975</todate></daterange></unitdatestructured>
+    <unitdate datechar="creation" unitdatetype="inclusive">1935-1975</unitdate><unitdatestructured datechar="creation" unitdatetype="bulk"><daterange><fromdate standarddate="1950">1950</fromdate><todate standarddate="1970">1970</todate></daterange></unitdatestructured>
+    <unitdate datechar="creation" unitdatetype="bulk">1950-1970</unitdate></did><odd id="aspace_3a5d6563e7edd9694cee76f589a429e8">
+      <head>General</head>
+      <p>Series 1 includes some correspondence and other stuff.</p></odd>
+    <arrangement id="aspace_ba87d1ba425d2a61f9a445b21c5c27ff">
+      <head>Arrangement</head>
+      <p>This series is arranged by title.</p>
+    </arrangement>
+    <c02 id="aspace_527bef8fb81084871b500f2f7f3ba1f6" level="file"><did>
+      <unittitle>Correspondence of yore</unittitle>
+      <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured>
+      <unitdatestructured certainty="approximate" datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1950">1950</fromdate><todate standarddate="2000">2000</todate></daterange></unitdatestructured>
+      <unitdate certainty="approximate" datechar="creation" unitdatetype="inclusive">circa 1950-2000</unitdate></did>
+    </c02>
+    <c02 id="aspace_256a752728678aab5bbfec1a62b7c74a" level="file"><did>
+      <unittitle>Correspondence and stuff</unittitle>
+      <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured>
+      <unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1935">1935</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured>
+      <unitdate datechar="creation" unitdatetype="inclusive">1935-1955</unitdate></did>
+    </c02>
+    <c02 id="aspace_9d28289576b38625ecd54e1257572010" level="file"><did>
+      <unittitle>Correspondence and diaries</unittitle>
+      <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured>
+      <unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1970">1970</fromdate><todate standarddate="1975">1975</todate></daterange></unitdatestructured>
+      <unitdate datechar="creation" unitdatetype="inclusive">1970-1975</unitdate></did>
+    </c02>
+  </c01>
+    <c01 id="aspace_f71be1c7963a7b05df9111373fd95420" level="series"><did>
+      <unittitle>Series 2: Papers and other materials</unittitle>
+      <unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1940">1940</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured></did>
+      <odd id="aspace_f9bd10462dbff2f75116dad6e1541605">
+        <head>General</head>
+        <p>Series 2 includes miscellaneous stuff.</p></odd>
+      <arrangement id="aspace_6e536b0bacd38f536a7977f1df08f643">
+        <head>Arrangement</head>
+        <p>Another series note.</p>
+      </arrangement>
+      <c02 id="aspace_1b433e582e1c7f7fe6b934b7d89618f2" level="file"><did>
+        <unittitle>First folder title</unittitle>
+        <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured>
+        <unitdatestructured datechar="creation" unitdatetype="inclusive"><datesingle standarddate="1945">1945</datesingle></unitdatestructured></did></c02>
+      <c02 id="aspace_0bd47d6f213b8ad946b2ca051a9399de" level="file"><did>
+        <unittitle>Second folder title</unittitle>
+        <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied"><quantity>1</quantity><unittype>Folders</unittype></physdescstructured>
+        <unitdatestructured datechar="creation" unitdatetype="inclusive"><daterange><fromdate standarddate="1940">1940</fromdate><todate standarddate="1955">1955</todate></daterange></unitdatestructured>
+        <unitdate datechar="creation" unitdatetype="inclusive">1940-1955</unitdate></did></c02>
+    </c01></dsc>
 </archdesc>
 </ead>
