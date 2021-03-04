@@ -253,7 +253,7 @@ Index Terms
     
     <!-- physdesc currently for Condition Note but needs work -->
     <xsl:template match="ead:archdesc/ead:did/ead:physdesc">
-        <xsl:value-of select="."/>
+        <xsl:text> (</xsl:text><xsl:value-of select="."/><xsl:text>)</xsl:text>
     </xsl:template>
     
     <!-- userestrict -->
