@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SAA-SDT/EAD3/master/ead3.rng"
+      type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ead audience="internal" xmlns="http://ead3.archivists.org/schema/"><control countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" relatedencoding="marc" repositoryencoding="iso15511" scriptencoding="iso15924"><recordid instanceurl="">JL0305211</recordid><filedesc><titlestmt><titleproper>Harold Pinnon, The Sacrifice: Manuscript</titleproper><author>Jessica M. Lydon, Associate Archivist</author></titlestmt><publicationstmt><publisher>Special Collections Research Center</publisher><address><addressline localtype="email">scrc@temple.edu</addressline></address><date>March 2021</date><num>SCRC 274</num></publicationstmt></filedesc><maintenancestatus value="derived"/><maintenanceagency><agencyname>Special Collections Research Center</agencyname></maintenanceagency><languagedeclaration><language langcode="eng">English</language><script scriptcode="Latn">Latin</script></languagedeclaration><conventiondeclaration><abbr>dacs</abbr><citation>Describing Archives: A Content Standard</citation></conventiondeclaration><maintenancehistory><maintenanceevent><eventtype value="derived"/><eventdatetime>2021-03-05T16:44:44-05:00</eventdatetime><agenttype value="machine"/><agent>ArchivesSpace v2.8.1</agent><eventdescription>This finding aid was produced using ArchivesSpace on Friday March  5, 2021 at 16:44</eventdescription></maintenanceevent></maintenancehistory></control><archdesc level="collection">
+  <did>
+    <unittitle>Harold Pinnon, The Sacrifice: Manuscript</unittitle>
+    <unitid>SCRC 274</unitid>
+    <repository>
+      <corpname>
+        <part>Special Collections Research Center</part>
+      </corpname>
+    </repository>
+    <langmaterial>
+      <language langcode="eng">English</language>
+    </langmaterial>
+    <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+      <quantity>0.1</quantity>
+      <unittype>Linear Feet</unittype>
+    </physdescstructured>
+    <physdesc localtype="container_summary">(1 folder)</physdesc>
+    <unitdatestructured certainty="approximate" datechar="creation" unitdatetype="inclusive">
+      <datesingle standarddate="1935">circa 1935</datesingle>
+    </unitdatestructured>
+    <unitdatestructured datechar="Accession" unitdatetype="inclusive">
+      <datesingle standarddate="2013-10">2013-10</datesingle>
+    </unitdatestructured>
+    <physloc audience="internal" id="aspace_6ba0389947b33cd721b575ddf9b5d60d">This collection may be housed off-site at the Library Depository, and require up to two business days to retrieve. Please review the finding aid and be prepared to identify specific materials to be retrieved. Contact the Special Collections Research Center in advance of your visit, so that materials may be relocated to the reading room for research.</physloc>
+    <origination label="Creator">
+      <persname source="TBD">
+        <part>Pinnon, Harold</part>
+      </persname>
+    </origination>
+  </did>
+  <scopecontent audience="internal" id="aspace_7ad6a53ceb6129721b79be5056b680d2">
+    <head>Content Description</head>
+<p>Harold Pinnon's memoir recounts the events surrounding the death of Pinnon family patriarch Frank in March 1905 and his wife, unnamed in the memoir, shortly thereafter in April 1905. The author, the oldest child of the Pinnon family, describes where each of his five siblings were placed after the death of their parents, as well as the difficulties of living with his uncle trying to support himself at the age of 13. Harold also recounts when each of the younger children were released from their respective foster homes and subsequently details the relationships of his sisters' marriages and the family's living situation after they were reunited.</p>  </scopecontent>
+  <accessrestrict audience="internal" id="aspace_844efc15d7594c0753b27d0e306f7c00">
+    <head>Conditions Governing Access</head>
+<p>Collection is open for research.</p>  </accessrestrict>
+  <altformavail audience="internal" id="aspace_4db06606bc82ac49889ea5ba93695309">
+    <head>Existence and Location of Copies</head>
+<p>The memoir has been digitized and is available online on the Temple University Digital Collections website: https://digital.library.temple.edu/digital/collection/p15037coll19/id/5109</p>  </altformavail>
+  <userestrict audience="internal" id="aspace_7653df0872d1628aa69d98ba6fb91810">
+    <head>Conditions Governing Use</head>
+<p>The Harold Pinnon, The Sacrifice: Manuscript is the physical property of the Special Collections Research Center, Temple University Libraries. The donor has not assigned their rights to Temple University Libraries. Other creators' intellectual property rights, including copyright, belong to them or their legal heirs and assigns. Researchers are responsible for determining the identity of rights holders and obtaining their permission for publication and for other purposes where stated.</p>  </userestrict>
+  <prefercite audience="internal" id="aspace_d4b611fb594de3c0535541ec99205001">
+    <head>Preferred Citation</head>
+<p>Harold Pinnon, The Sacrifice : Manuscript, circa 1935, SCRC 274, Special Collections Research Center, Temple University Libraries, Philadelphia, Pennsylvania.</p>  </prefercite>
+  <custodhist audience="internal" id="aspace_6682afdbb3473c094a3206252bbba88d">
+    <head>Custodial History</head>
+<p>Donated by Arthur and Margaret Shragher in October 2013.</p>  </custodhist>
+  <processinfo audience="internal" id="aspace_5ac1d5867989d2c9c73e465d56543f5b">
+    <head>Processing Information</head>
+<p>Finding aid prepared in March 2021 by Jessica M. Lydon, Associate Archivist.</p>  </processinfo>
+  <controlaccess>
+    <subject source="TBD">
+      <part>Jewish children--Insitutional care</part>
+    </subject>
+    <subject source="TBD">
+      <part>Jewish families--Pennsylvania--Philadelphia</part>
+    </subject>
+    <subject source="TBD">
+      <part>Jews--United States--Memoirs and biographies</part>
+    </subject>
+    <genreform source="gmgpc">
+      <part>Manuscripts</part>
+    </genreform>
+    <geogname source="TBD">
+      <part>Philadelphia (Pa.)</part>
+    </geogname>
+  </controlaccess>
+  <dsc/>
+</archdesc>
+</ead>
