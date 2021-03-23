@@ -10,15 +10,14 @@
     <!-- transforms EAD in XML from aspace to plain text following TU finding aid template -->
     <xsl:template match="text() | @*"/>
     <xsl:template match="ead:ead">
-    	
 Collection Summary
     
 Title
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:unittitle"/>    
         
 Dates
-<xsl:apply-templates select="ead:archdesc/ead:did/ead:unitdate"/>
-    
+<xsl:apply-templates select="ead:archdesc/ead:did"/>
+
 Collection ID
 <xsl:apply-templates select="//ead:unitid"/>    
 
@@ -35,9 +34,7 @@ Language
 <xsl:apply-templates select="ead:archdesc/ead:did/ead:langmaterial"/>
 
 Detailed Collection Information
-
 <!-- Historical Note [or] Biographical Note -->
-
 <xsl:apply-templates select="ead:archdesc/ead:bioghist"/>
         
 Description of Collection
@@ -114,16 +111,7 @@ Index Terms
 <p>The following headings have been used to index the description of this collection in Temple University’s electronic catalog:</p>
         
 <!-- Personal/Family Names: -->
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:persname"/>        
-<!-- Corporate Names: -->
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:corpname"/>        
-<!-- Subjects: -->
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:subject"/>
-<!-- Places: -->
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:geogname"/>
-<!-- Material Types: -->
-<xsl:apply-templates select="ead:archdesc/ead:controlaccess/ead:genreform"/>  
-
+<xsl:apply-templates select="ead:archdesc/ead:controlaccess"/>
 
 </xsl:template>
     
@@ -135,12 +123,48 @@ Index Terms
     </xsl:template>
     
     <!-- dates -->
+    
+    <xsl:template match="ead:archdesc/ead:did">
+        
+        <xsl:choose>
+            <xsl:when test="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate and ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate and ead:unitdatestructured[@unitdatetype = 'bulk']/ead:daterange/ead:fromdate and ead:unitdatestructured[@unitdatetype = 'bulk']/ead:daterange/ead:todate">
+                
+                <xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate"/><xsl:text>-</xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate"/><xsl:text>, bulk </xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype = 'bulk']/ead:daterange/ead:fromdate"/><xsl:text>-</xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype = 'bulk']/ead:daterange/ead:todate"/>
+                
+            </xsl:when>
+            
+            <xsl:when test="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:datesingle">
+                <xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:datesingle"/>
+            </xsl:when>
+            
+            <xsl:when test="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate and ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate">
+                
+                <xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate"/><xsl:text>-</xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate"/>
+                
+            </xsl:when>
+            
+            <xsl:when test="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate and ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate and ead:unitdatestructured[@unitdatetype = 'bulk']/ead:datesingle">
+                
+                <xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:fromdate"/><xsl:text>-</xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype != 'bulk']/ead:daterange/ead:todate"/><xsl:text>, bulk </xsl:text><xsl:value-of select="ead:unitdatestructured[@unitdatetype = 'bulk']/ead:datesingle"/>
+                
+            </xsl:when>
+            
+            <xsl:otherwise>
+                <xsl:text>Please check date</xsl:text>
+            </xsl:otherwise>
+            
+        </xsl:choose>
+        
+       
+    </xsl:template>
+    <!-- 
     <xsl:template match="ead:archdesc/ead:did/ead:unitdate[@unitdatetype != 'bulk']">
         <xsl:value-of select="."/>
     </xsl:template>
     <xsl:template match="ead:archdesc/ead:did/ead:unitdate[@unitdatetype = 'bulk']">
         <xsl:text>, bulk </xsl:text><xsl:value-of select="."/>
     </xsl:template>
+     -->
     
     <!-- collection ID -->
     <xsl:template match="//ead:unitid">
@@ -149,7 +173,7 @@ Index Terms
     
     <!-- creators -->
     <xsl:template match="ead:archdesc/ead:did/ead:origination[@label = 'Creator']/*">
-        <xsl:value-of select="ead:part" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:part" separator="&#10;"/>
         <xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
@@ -163,7 +187,7 @@ Index Terms
     
     <!-- language -->
     <xsl:template match="ead:archdesc/ead:did/ead:langmaterial">
-        <xsl:value-of select="ead:language" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:language" separator="&#10;"/>
     </xsl:template>
     
     <!-- bioghist -->
@@ -172,25 +196,25 @@ Index Terms
             <xsl:value-of>Historical Note [or] Biographical Note</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
     <!-- scopecontent -->
     <xsl:template match="ead:archdesc/ead:scopecontent">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
     <!-- arrangement -->
     <xsl:template match="ead:archdesc/ead:arrangement">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
         <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
     </xsl:template>
     
     <!-- frontmatter series notes -->
     <xsl:template match="ead:archdesc/ead:dsc/ead:c01/ead:odd">
         <xsl:if test="normalize-space(.)!=''">
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
             <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
         </xsl:if>
     </xsl:template>
@@ -201,7 +225,7 @@ Index Terms
             <xsl:value-of>Alternate Form Available</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
         </xsl:if>
@@ -213,13 +237,13 @@ Index Terms
             <xsl:value-of>Other Finding Aids</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
     <!-- accessrestrict -->
     <xsl:template match="ead:archdesc/ead:accessrestrict">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
     <!-- physloc -->     
@@ -235,7 +259,7 @@ Index Terms
             <xsl:value-of>Technical Access</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
@@ -247,7 +271,7 @@ Index Terms
             <xsl:value-of>Accruals </xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
@@ -258,12 +282,12 @@ Index Terms
     
     <!-- userestrict -->
     <xsl:template match="ead:archdesc/ead:userestrict">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
     <!-- prefercite -->
     <xsl:template match="ead:archdesc/ead:prefercite">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
     <!-- relatedmaterial -->
@@ -274,13 +298,13 @@ Index Terms
             <xsl:value-of>Related Material</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
     <!-- custodhist -->
     <xsl:template match="ead:archdesc/ead:custodhist">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
     <!-- separatedmaterial -->
@@ -291,69 +315,61 @@ Index Terms
             <xsl:value-of>Separated Material</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+            <xsl:value-of select="ead:p" separator="&#10;"/>
         </xsl:if>
     </xsl:template>
     
     <!-- processinfo -->
     <xsl:template match="ead:archdesc/ead:processinfo">
-        <xsl:value-of select="ead:p" separator="&#10;&#009;"/>
+        <xsl:value-of select="ead:p" separator="&#10;"/>
     </xsl:template>
     
-    <!-- persname -->
-    <xsl:template match="ead:archdesc/ead:controlaccess/ead:persname">
-        <xsl:if test="normalize-space(.)!=''">
+    <!-- index terms -->
+    <xsl:template match="ead:archdesc/ead:controlaccess">
+        <!-- personal name -->
+        <xsl:if test="ead:persname != ''">
             <xsl:text>&#xa;</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of>Personal/Family Names:</xsl:value-of>
+            <xsl:text>Personal/Family Names:</xsl:text>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:part"/>
-            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:persname/ead:part" separator="&#10;"/>
         </xsl:if>
-    </xsl:template>
-    
-    <!-- corpname -->
-    <xsl:template match="ead:archdesc/ead:controlaccess/ead:corpname">
-        <xsl:if test="normalize-space(.)!=''">
+        
+        <!-- corpname -->
+        <xsl:if test="ead:corpname != ''">
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of>Corporate Names:</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:part"/>
+            <xsl:text>Corporate Names:</xsl:text>
             <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:corpname/ead:part" separator="&#10;"/>
         </xsl:if>
-    </xsl:template>
-    
-    <!-- subject -->
-    <xsl:template match="ead:archdesc/ead:controlaccess/ead:subject">
-        <xsl:if test="normalize-space(.)!=''">
+        
+        <!-- subject -->
+        <xsl:if test="ead:subject != ''">
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of>Subjects:</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:part"/>
+            <xsl:text>Subjects:</xsl:text>
             <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:subject/ead:part" separator="&#10;"/>
         </xsl:if>
-    </xsl:template>
-    
-    <!-- geogname -->
-    <xsl:template match="ead:archdesc/ead:controlaccess/ead:geogname">
-        <xsl:if test="normalize-space(.)!=''">
+        
+        <!-- geogname -->
+        <xsl:if test="ead:geogname != ''">
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of>Places:</xsl:value-of>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:value-of select="ead:part"/>
+            <xsl:text>Places:</xsl:text>
             <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:geogname/ead:part" separator="&#10;"/>
         </xsl:if>
-    </xsl:template>
-    
-    <!-- genreform -->
-    <xsl:template match="ead:archdesc/ead:controlaccess/ead:genreform">
-    <xsl:if test="normalize-space(.)!=''">
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:value-of>Material Types:</xsl:value-of>
-        <xsl:text>&#xa;</xsl:text>
-        <xsl:value-of select="ead:part"/>
-        <xsl:text>&#xa;</xsl:text>
-    </xsl:if>
+        
+        <!-- genreform -->
+        <xsl:if test="ead:genreform != ''">
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:text>Material Types:</xsl:text>
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:value-of select="ead:genreform/ead:part" separator="&#10;"/>
+        </xsl:if>
     </xsl:template>
     
 <!-- END FRONTMATTER --> 
