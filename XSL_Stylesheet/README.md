@@ -1,0 +1,1 @@
+XSL stylesheet created to transform EAD for finding aid frontmatter generated from ArchivesSpace into plan text, for uploading into the Libraries web site finding aid display. Created by Leanne Finnigan and Katy Rawdon.
